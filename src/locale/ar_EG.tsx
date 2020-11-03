@@ -1,0 +1,43 @@
+export default {
+  moneySymbol: '$',
+  tableForm: {
+    search: 'بحث',
+    reset: 'اعادة تعيين',
+    submit: 'تنفيذ',
+    collapsed: 'موسعة',
+    expand: 'Collapse',
+    inputPlaceholder: 'الرجاء الإدخال',
+    selectPlaceholder: 'الرجاء الإختيار',
+  },
+  alert: {
+    clear: 'تنظيف',
+    selected: 'محدد',
+    item: 'عنصر',
+  },
+  pagination: {
+    total: {
+      range: ' ',
+      total: 'من',
+      item: 'عناصر',
+    },
+  },
+  tableToolBar: {
+    leftPin: 'تثبيت على اليسار',
+    rightPin: 'تثبيت على اليسار',
+    noPin: 'إلغاء التثبيت',
+    leftFixedTitle: 'تعليق على اليسار',
+    rightFixedTitle: 'تعليق على اليمين',
+    noFixedTitle: 'غير معلقة',
+    reset: 'إعادة تعيين',
+    columnDisplay: 'الأعمدة المعروضة',
+    columnSetting: 'الإعدادات',
+    fullScreen: 'عرض كامل الشاشة',
+    exitFullScreen: 'الخروج من عرض كامل الشاشة',
+    reload: 'تحديث',
+    density: 'الكثافة',
+    densityDefault: 'افتراضي',
+    densityLarger: 'أكبر',
+    densityMiddle: 'متوسط',
+    densitySmall: 'مدمج',
+  },
+};

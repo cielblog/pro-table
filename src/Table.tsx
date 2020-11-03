@@ -896,7 +896,11 @@ const ProTable = <T extends {}, U extends object>(
     );
   }
 
-  const className = classNames(defaultClassName, propsClassName);
+  const className = classNames(
+    defaultClassName,
+    propsClassName,
+    intl.locale === 'ar_EG' && 'pro-table-rtl',
+  );
   const toolbarDom = toolBarRender !== false &&
     (options !== false || headerTitle || toolBarRender) && (
       // if options= false & headerTitle=== false, hide Toolbar
@@ -1015,6 +1019,7 @@ const ProTable = <T extends {}, U extends object>(
 
   return (
     <ConfigProvider
+      direction={intl.locale === 'ar_EG' ? 'rtl' : 'ltr'}
       getPopupContainer={() => ((rootRef.current || document.body) as any) as HTMLElement}
     >
       <div className={className} id="ant-design-pro-table" style={style} ref={rootRef}>

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import arEG from '../../locale/ar_EG';
 import zhCN from '../../locale/zh_CN';
 import enUS from '../../locale/en_US';
 import viVN from '../../locale/vi_VN';
@@ -43,6 +44,7 @@ const createIntl = (locale: string, localeMap: { [key: string]: any }): IntlType
   locale,
 });
 
+const arEGIntl = createIntl('ar_EG', arEG);
 const zhCNIntl = createIntl('zh_CN', zhCN);
 const enUSIntl = createIntl('en_US', enUS);
 const viVNIntl = createIntl('vi_VN', viVN);
@@ -55,6 +57,7 @@ const zhTWIntl = createIntl('zh_TW', zhTW);
 const frFRIntl = createIntl('fr_FR', frFR);
 
 const intlMap = {
+  'ar-EG': arEGIntl,
   'zh-CN': zhCNIntl,
   'en-US': enUSIntl,
   'vi-VN': viVNIntl,
@@ -67,7 +70,18 @@ const intlMap = {
   'fr-FR': frFRIntl,
 };
 
-export { enUSIntl, zhCNIntl, viVNIntl, itITIntl, jaJPIntl, esESIntl, ruRUIntl, msMYIntl, zhTWIntl };
+export {
+  arEGIntl,
+  enUSIntl,
+  zhCNIntl,
+  viVNIntl,
+  itITIntl,
+  jaJPIntl,
+  esESIntl,
+  ruRUIntl,
+  msMYIntl,
+  zhTWIntl,
+};
 
 const IntlContext = React.createContext<IntlType>(intlMap[getLang() || ''] || zhCNIntl);
 
@@ -76,8 +90,7 @@ const { Consumer: IntlConsumer, Provider: IntlProvider } = IntlContext;
 export { IntlConsumer, IntlProvider, createIntl };
 
 export function useIntl(): IntlType {
-  const intl = useContext(IntlContext);
-  return intl;
+  return useContext(IntlContext);
 }
 
 export default IntlContext;

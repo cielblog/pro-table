@@ -4,6 +4,7 @@
 
 .@{pro-table-prefix-cls} {
   z-index: 1;
+
   &:not(:root):fullscreen {
     min-height: 100vh;
     overflow: auto;
@@ -47,5 +48,17 @@
 
   .@{ant-prefix}-table.@{ant-prefix}-table-middle .@{pro-table-prefix-cls} {
     margin: -12px -8px;
+  }
+}
+
+.pro-table-rtl {
+  .@{ant-prefix}-table-row .@{ant-prefix}-table-cell:first-child {
+    padding-right: 24px;
+    padding-left: unset !important;
+  }
+
+  .@{ant-prefix}-table-content tr:first-child > th:first-child {
+    padding-right: 24px;
+    padding-left: unset !important;
   }
 }
